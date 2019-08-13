@@ -91,7 +91,7 @@ class ElasticSearchPipeline(object):
         return ext
 
     def process_unique_key(self, unique_key):
-        if isinstance(unique_key, list):
+        if isinstance(unique_key, (list, tuple)):
             unique_key = unique_key[0].encode('utf-8')
         elif isinstance(unique_key, string_types):
             unique_key = unique_key.encode('utf-8')
