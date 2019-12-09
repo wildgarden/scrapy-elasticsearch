@@ -12,7 +12,7 @@ Install
    pip install "ScrapyElasticSearch[extras]"
 
 Usage (Configure settings.py:)
-----------------------
+------------------------------
 ::
 
    ITEM_PIPELINES = {
@@ -28,14 +28,15 @@ Usage (Configure settings.py:)
    # can also accept a list of fields if need a composite key
    ELASTICSEARCH_UNIQ_KEY = ['url', 'id']
 
-ELASTICSEARCH_SERVERS - list of hosts or string (single host). Host format: protocl://username:password@host:port.
+ELASTICSEARCH_SERVERS - list of hosts or string (single host). Host format: protocol://username:password@host:port.
+
 Examples:
     - ['http://username:password@elasticsearch.example.com:9200']
     - ['http://elasticsearch.example.com:9200']
     - 'https://elasticsearch.example.com:9200'
 
-Available parameters (in settings.py:)
-----------------------
+Available parameters (in settings.py)
+-------------------------------------
 ::
 
    ELASTICSEARCH_INDEX - elastic search index
@@ -59,7 +60,7 @@ Available parameters (in settings.py:)
 Here is an example app (dirbot https://github.com/jayzeng/dirbot) in case you are still confused.
 
 Dependencies
-=========
+============
 See requirements.txt
 
 Changelog
