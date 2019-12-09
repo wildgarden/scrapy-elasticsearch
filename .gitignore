@@ -6,3 +6,4 @@ dist
 .ropeproject
 MANIFEST
 env
+.vscode
