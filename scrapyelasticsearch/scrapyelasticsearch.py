@@ -77,6 +77,9 @@ class ElasticSearchPipeline(object):
             es_settings['ca_certs'] = crawler_settings['ELASTICSEARCH_CA']['CA_CERT'] or certifi.where()
             es_settings['client_key'] = crawler_settings['ELASTICSEARCH_CA']['CLIENT_KEY']
             es_settings['client_cert'] = crawler_settings['ELASTICSEARCH_CA']['CLIENT_CERT']
+            es_settings['verify_certs'] = crawler_settings['ELASTICSEARCH_CA']['VERIFY_MODE']
+            es_settings['ssl_assert_hostname'] = crawler_settings['ELASTICSEARCH_CA']['CHECK_HOSTNAME']
+            es_settings['ssl_show_warn'] = crawler_settings['ELASTICSEARCH_CA']['SSL_SHOW_WARN']
 
         es = Elasticsearch(**es_settings)
         return es
